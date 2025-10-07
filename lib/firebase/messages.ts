@@ -75,9 +75,11 @@ export const getMessages = (room: string, callback: (messages: Message[]) => voi
   return onSnapshot(q, (snapshot) => {
     const messages: Message[] = []
     snapshot.forEach((doc) => {
+      const data = doc.data()
       messages.push({
         id: doc.id,
-        ...doc.data()
+        ...data,
+        created_at: data.created_at?.toDate?.()?.toISOString() || new Date().toISOString()
       } as Message)
     })
     callback(messages)
@@ -136,13 +138,14 @@ export const getTypingIndicators = (room: string, callback: (indicators: TypingI
 
     snapshot.forEach((doc) => {
       const data = doc.data()
-      const updatedAt = data.updated_at?.toDate()
+      const updatedAt = data.updated_at?.toDate?.()
       
       // Only include indicators updated within the last 10 seconds
       if (updatedAt && updatedAt > tenSecondsAgo) {
         indicators.push({
           id: doc.id,
-          ...data
+          ...data,
+          updated_at: updatedAt.toISOString()
         } as TypingIndicator)
       }
     })
@@ -165,7 +168,7 @@ export const cleanupOldTypingIndicators = async () => {
     const batch = []
     snapshot.forEach((doc) => {
       const data = doc.data()
-      const updatedAt = data.updated_at?.toDate()
+      const updatedAt = data.updated_at?.toDate?.()
       
       if (updatedAt && updatedAt < tenSecondsAgo) {
         batch.push(deleteDoc(doc.ref))
