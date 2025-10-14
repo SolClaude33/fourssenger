@@ -1,0 +1,7 @@
+# Fourssenger - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://fourssenger.vercel.app/sitemap.xml
+

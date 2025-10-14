@@ -1,0 +1,35 @@
+{
+  "name": "Fourssenger - Crypto Messenger",
+  "short_name": "Fourssenger",
+  "description": "Connect with the crypto community in real-time",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#5AA1E3",
+  "theme_color": "#5AA1E3",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/4logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/4logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["social", "crypto", "finance"],
+  "shortcuts": [
+    {
+      "name": "Open Chat",
+      "short_name": "Chat",
+      "description": "Open the main chat room",
+      "url": "/",
+      "icons": [{ "src": "/4logo.png", "sizes": "192x192" }]
+    }
+  ]
+}
+

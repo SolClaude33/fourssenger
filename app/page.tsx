@@ -512,6 +512,65 @@ export default function FourssengerPage() {
             <Video className="h-4 w-4" style={{ color: "var(--msn-blue-700)" }} />
           </button>
           <div className="flex-1" />
+          
+          {/* Social Media & Token Buttons */}
+          <button
+            onClick={() => window.open('https://x.com/tu_twitter', '_blank')}
+            title="Follow us on X"
+            className="h-8 w-8 flex items-center justify-center transition-all"
+            style={{
+              borderRadius: "6px",
+              background: "linear-gradient(to bottom, #000000, #333333)",
+              border: "1px solid #000000",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,.1)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "linear-gradient(to bottom, #1a1a1a, #404040)"
+              e.currentTarget.style.outline = "1px solid var(--msn-blue-500)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "linear-gradient(to bottom, #000000, #333333)"
+              e.currentTarget.style.outline = "none"
+            }}
+            aria-label="Follow us on X"
+          >
+            <svg className="h-4 w-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </button>
+          
+          <button
+            onClick={() => {
+              const ca = '0x1234567890abcdef1234567890abcdef12345678' // Reemplaza con tu CA real
+              navigator.clipboard.writeText(ca)
+              toast({
+                title: "CA Copiado",
+                description: "Contract Address copiado al portapapeles",
+              })
+            }}
+            title="Copy Contract Address"
+            className="h-8 w-8 flex items-center justify-center transition-all"
+            style={{
+              borderRadius: "6px",
+              background: "linear-gradient(to bottom, #FFD700, #FFA500)",
+              border: "1px solid #FFD700",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,.3)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "linear-gradient(to bottom, #FFE55C, #FFB84D)"
+              e.currentTarget.style.outline = "1px solid var(--msn-blue-500)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "linear-gradient(to bottom, #FFD700, #FFA500)"
+              e.currentTarget.style.outline = "none"
+            }}
+            aria-label="Copy Contract Address"
+          >
+            <svg className="h-4 w-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </button>
+          
           <button
             onClick={() => setSettingsModalOpen(true)}
             title="Settings"
