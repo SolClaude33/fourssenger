@@ -1079,7 +1079,42 @@ export default function FourssengerPage() {
             >
               <span style={{ fontSize: "14px" }}>😎</span>
             </button>
-          </div>
+            
+            {/* Contract Address Section */}
+            <div className="flex items-center gap-2 px-2 py-1" style={{ borderLeft: "1px solid var(--msn-border)" }}>
+              <span style={{ fontSize: "11px", color: "var(--text-muted)", fontWeight: "600" }}>CA:</span>
+              <span style={{ fontSize: "10px", color: "var(--text-primary)", fontFamily: "monospace" }}>
+                0xd64211e3b78eac1370671d7fe5c12d16a3d54444
+              </span>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText('0xd64211e3b78eac1370671d7fe5c12d16a3d54444')
+                  toast({
+                    title: "CA Copied",
+                    description: "Contract Address copied to clipboard",
+                  })
+                }}
+                title="Copy Contract Address"
+                className="h-5 w-5 flex items-center justify-center transition-all"
+                style={{
+                  borderRadius: "3px",
+                  background: "linear-gradient(to bottom, #FFD700, #FFA500)",
+                  border: "1px solid #FFD700",
+                  boxShadow: "inset 0 1px 0 rgba(255,255,255,.3)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "linear-gradient(to bottom, #FFE55C, #FFB84D)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "linear-gradient(to bottom, #FFD700, #FFA500)"
+                }}
+                aria-label="Copy Contract Address"
+              >
+                <svg className="h-3 w-3 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                </svg>
+              </button>
+            </div>
           <div className="flex gap-2">
             <input
               placeholder="Type your message here..."
