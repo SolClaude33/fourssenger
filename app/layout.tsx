@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   publisher: "Fourssenger",
   icons: {
     icon: [
-      { url: "/4logo.png", sizes: "any", type: "image/png" },
+      { url: "/Group_2.png", sizes: "any", type: "image/png" },
     ],
-    shortcut: "/4logo.png",
-    apple: "/4logo.png",
+    shortcut: "/Group_2.png",
+    apple: "/Group_2.png",
   },
   manifest: "/site.webmanifest",
   openGraph: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Fourssenger",
     images: [
       {
-        url: "/4logo.png",
+        url: "/Group_2.png",
         width: 1200,
         height: 630,
         alt: "Fourssenger Logo",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fourssenger - Crypto Messenger",
     description: "Connect with the crypto community in real-time. A modern messenger inspired by MSN.",
-    images: ["/4logo.png"],
+    images: ["/Group_2.png"],
     creator: "@tu_twitter", // Cambia esto por tu Twitter real
   },
   viewport: {

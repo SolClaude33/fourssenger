@@ -439,7 +439,7 @@ export default function FourssengerPage() {
             borderBottom: "1px solid #B6C9E6",
           }}
         >
-          <Image src="/4logo.png" alt="Fourssenger" width={24} height={24} className="flex-shrink-0" />
+          <Image src="/Group_2.png" alt="Fourssenger" width={24} height={24} className="flex-shrink-0" />
           <span style={{ color: "var(--text-primary)", fontWeight: "600", fontSize: "15px" }}>Fourssenger</span>
         </div>
 
@@ -753,7 +753,7 @@ export default function FourssengerPage() {
           >
             <div className="text-xs font-bold text-white flex-1">Fourssenger Live</div>
             <Image
-              src="/4logo.png"
+              src="/Group_2.png"
               alt="Fourssenger"
               width={32}
               height={32}

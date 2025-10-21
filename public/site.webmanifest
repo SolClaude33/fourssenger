@@ -9,13 +9,13 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/4logo.png",
+      "src": "/Group_2.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/4logo.png",
+      "src": "/Group_2.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
@@ -28,7 +28,7 @@
       "short_name": "Chat",
       "description": "Open the main chat room",
       "url": "/",
-      "icons": [{ "src": "/4logo.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/Group_2.png", "sizes": "192x192" }]
     }
   ]
 }
