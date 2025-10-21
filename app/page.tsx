@@ -515,7 +515,7 @@ export default function FourssengerPage() {
           
           {/* Social Media & Token Buttons */}
           <button
-            onClick={() => window.open('https://x.com/tu_twitter', '_blank')}
+            onClick={() => window.open('https://x.com/Fourssenger', '_blank')}
             title="Follow us on X"
             className="h-8 w-8 flex items-center justify-center transition-all"
             style={{

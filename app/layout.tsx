@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Fourssenger - Crypto Messenger",
     description: "Connect with the crypto community in real-time. A modern messenger inspired by MSN.",
     images: ["/Group_2.png"],
-    creator: "@tu_twitter", // Cambia esto por tu Twitter real
+    creator: "@Fourssenger",
   },
   viewport: {
     width: "device-width",
